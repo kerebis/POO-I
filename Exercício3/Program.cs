@@ -1,28 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercício3
+namespace Exercício2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int A = 0;
-            int B = 0;
-            int C = 0;
-
-            if (A == B) 
+            int num = 0;
+            Console.WriteLine("Escreva um número");
+            num = int.Parse(Console.ReadLine());
+            if (num % 2 == 0) 
             {
-                C = A + B;
+                Console.WriteLine("O número é par.");
+            }
+            else if (num % 3 == 0) 
+            {
+                Console.WriteLine("O número é impar.");
             }
             else
             {
-                C = A * B;
+                Console.WriteLine("O número é nulo.");
             }
-            Console.WriteLine("O resultado da operação é {0}", C);
         }
     }
 }
